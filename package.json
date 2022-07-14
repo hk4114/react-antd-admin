@@ -1,6 +1,10 @@
 {
   "name": "react-antd-admin",
-  "keywords": ["react", "create-react-app", "javascript"],
+  "keywords": [
+    "react",
+    "create-react-app",
+    "javascript"
+  ],
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,7 +43,12 @@
   },
   "devDependencies": {
     "@craco/craco": "^6.4.5",
-    "craco-less": "^2.0.0"
+    "craco-less": "^2.0.0",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "prettier": "^2.7.1"
   },
   "compilerOptions": {
     "baseUrl": "./",
