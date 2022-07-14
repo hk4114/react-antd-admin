@@ -1,3 +1,6 @@
 {
-  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write .", "git add ."]
+  "**/*": "prettier --write --ignore-unknown",
+  "src/**.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+  "**/*.{less,css}": ["stylelint --fix", "prettier --write"],
+  "*.md": ["prettier --write"]
 }
