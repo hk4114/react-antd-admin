@@ -1,11 +1,14 @@
 # react-antd-admin
+
 > create by [cra] [javascript]
 
 ## 初始化
 
 ### stage 1 构建项目
+
 1. cra 构建项目
 2. 安装 antd
+
 ```sh
 yarn create react-app react-antd-admin
 cd react-antd-admin
@@ -18,6 +21,7 @@ yarn add craco-less
 ```
 
 ### stage 2 配置路径别名
+
 ```js
    const path = require('path')
 const resolve = dir => path.resolve(__dirname, dir)
@@ -45,6 +49,7 @@ module.exports = {
 ```
 
 ### stage 3 统一代码风格
+
 ```sh
 yarn add --dev eslint
 yarn config set ignore-engines true # 如果 eslint 安装报错
@@ -55,6 +60,7 @@ yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 ### stage 4 代码提交规范与校验
+
 ```sh
 yarn add lint-staged husky -D
 npm set-script prepare "husky install" # 在 package.json 中添加脚本
