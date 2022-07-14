@@ -53,3 +53,37 @@ yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
 # .eslintrc extend 中添加 prettier, 解决 eslint 与 prettier 冲突
 # 配置 .prettierrc
 ```
+
+### stage 4 代码提交规范与校验
+```sh
+yarn add lint-staged husky -D
+npm set-script prepare "husky install" # 在 package.json 中添加脚本
+yarn prepare # 初始化husky,将 git hooks 钩子交由 husky 执行
+npx husky add .husky/pre-commit "npx lint-staged"
+# 配置 .lintstagedrc.json commit 提交时进行校验和重写
+yarn add commitlint @commitlint/config-conventional -D
+# commit message template dependence
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+yarn add commitizen cz-conventional-changelog -D
+npm set-script commit "git-cz" # package.json 中添加 commit 指令, 执行 `git-cz` 指令
+npx commitizen init cz-conventional-changelog --save-dev --save-exact
+yarn add -D commitlint-config-cz  cz-customizable
+# 配置 commitlint.config.js
+# 配置 .cz-config.js
+# package.json 配置 config commitizen
+git add .
+yarn commit
+git push
+```
+
+```json
+"config": {
+  "commitizen": {
+    "path": "./node_modules/cz-customizable"
+  }
+}
+```
+
+- [.lintstagedrc.json](./.lintstagedrc.json)
+- [commitlint.config.js](./commitlint.config.js)
+- [.cz-config.js](./.cz-config.js)
