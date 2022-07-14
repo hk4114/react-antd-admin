@@ -90,20 +90,6 @@ export const checkIosAndroidIpad = () => {
 }
 
 /**
- * 替换标签
- */
-// eslint-disable-next-line no-useless-escape
-export const replaceEle = str =>
-  str.replace(/\<i\>(.*?)\<\/i\>/g, '<span>$1</span>')
-
-/**
- * 取闭合标签
- */
-// eslint-disable-next-line no-useless-escape
-export const matchEle = str =>
-  str.match(/(<span class="blue">)([\S\s]*?)(\<\/span>)/g)
-
-/**
  * 1000->1,000
  */
 export const formatNum = num =>
