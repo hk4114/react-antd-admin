@@ -1,11 +1,11 @@
 import React from 'react'
-import { Button } from 'antd'
 import '@/App.less'
+import Home from './pages/Home'
 
 function App() {
   return (
     <div className="App">
-      <Button>demo</Button>
+      <Home />
     </div>
   )
 }
