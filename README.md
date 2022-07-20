@@ -1,6 +1,6 @@
 # react-antd-admin
 
-> create by [cra] [javascript]
+> create by [cra] [javascript] > https://github.com/public-apis/public-apis
 
 ## 初始化
 
@@ -90,8 +90,17 @@ git push
 }
 ```
 
+样式
+
+```sh
+yarn stylelint stylelint-config-prettier stylelint-config-recess-order stylelint-config-standard stylelint-less -D
+# 配置 .stylelintignore .stylelintrc.json
+```
+
 - [.lintstagedrc.json](./.lintstagedrc.json)
 - [commitlint.config.js](./commitlint.config.js)
 - [.cz-config.js](./.cz-config.js)
 
 ## 布局路由鉴权
+
+### layout
