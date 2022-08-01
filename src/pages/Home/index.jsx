@@ -1,10 +1,15 @@
 import React from 'react'
-import Layout from '@/components/Layout'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div>
-      <Layout />
-    </div>
+    <>
+      <main>Home</main>
+      <nav>
+        <Link to="/about">About</Link>
+        <br />
+        <Link to="/abouts">Aboutsssssssssss</Link>
+      </nav>
+    </>
   )
 }

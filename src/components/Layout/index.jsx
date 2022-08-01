@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import { Breadcrumb, Layout, Menu } from 'antd'
 import './index.less'
 
@@ -29,11 +30,11 @@ const LayoutIndex = () => {
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>
           </Breadcrumb>
-          <div className="site-layout-content">Content</div>
+          <div className="site-layout-content">
+            <Outlet></Outlet>
+          </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>
-          Ant Design ©2018 Created by Ant UED
-        </Footer>
+        <Footer style={{ textAlign: 'center' }}>Footer</Footer>
       </Layout>
     </section>
   )

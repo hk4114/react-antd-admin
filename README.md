@@ -103,4 +103,62 @@ yarn stylelint stylelint-config-prettier stylelint-config-recess-order stylelint
 
 ## 布局路由鉴权
 
-### layout
+### 路由
+
+quick start
+
+```js
+// index.js
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+)
+
+// App.jsx
+import * as React from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
+import './App.css'
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Welcome to React Router!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
+    </div>
+  )
+}
+
+function Home() {
+  return (
+    <>
+      <main>Home</main>
+      <nav>
+        <Link to="/about">About</Link>
+      </nav>
+    </>
+  )
+}
+
+function About() {
+  return (
+    <>
+      <main>About</main>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
+    </>
+  )
+}
+```

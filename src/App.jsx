@@ -1,11 +1,13 @@
 import React from 'react'
+// import { Routes, Route } from 'react-router-dom'
+import Router from '@/routers/index'
+
 import '@/App.less'
-import Home from '@/pages/Home'
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Router />
     </div>
   )
 }
