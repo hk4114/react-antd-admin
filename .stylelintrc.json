@@ -1,7 +1,0 @@
-{
-  "rules": {
-    "color-function-notation": "legacy",
-    "alpha-value-notation": "number"
-  },
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"]
-}
